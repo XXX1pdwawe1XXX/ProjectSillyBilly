@@ -1,0 +1,11 @@
+TODO:
+
+1) Add netcode to share sail blocks and block settings with Sail Framework.
+2) Add config for sail framework settings
+  2a) WC-style, 1 config per block
+  2b) each config will have
+    * subtypeID
+    * surface area coefficient
+    * envrionment types
+    * flag?
+    * composite sail? (multiple blocks form a large sail like arrestor cables if true)
