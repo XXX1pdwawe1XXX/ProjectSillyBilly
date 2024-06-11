@@ -1,5 +1,9 @@
 using System;
 using System.Numerics;
+using VRage;
+using VRageMath;
+using Sandbox;
+
 
 namespace SillyBilly.SillyBilly
 {
@@ -35,8 +39,8 @@ namespace SillyBilly.SillyBilly
         public uint CalculateWindSailThrust(Vector3 windDirection, Vector3 sailDirection)
         {
             float dotProduct = Vector3.Dot(windDirection, sailDirection);
-            float angle = Math.Acos(dotProduct / (windDirection.Length() * sailDirection.Length())) * (180 / Math.PI);
-            return (int)(windScale * Math.Cos(angle * (Math.PI / 180)));
+            float angle = (float)(Math.Acos(dotProduct / (windDirection.Length() * sailDirection.Length())) * (180 / Math.PI));
+            return (uint)(windScale * Math.Cos(angle * (Math.PI / 180)));
         }
 
         /*
@@ -86,7 +90,7 @@ namespace SillyBilly.SillyBilly
             CheckAndUpdateWindDirection();
             return windDirection;
         }
-        
+
         /*
             The following calculates the sail area of a sail using the "Arrestor Hook" method
 
