@@ -1,5 +1,4 @@
 using System;
-using System.Numerics;
 using VRage;
 using VRageMath;
 using Sandbox;
@@ -17,7 +16,7 @@ namespace SillyBilly.SillyBilly
         private float sailDegree = 0;
         private float windDegree = 0;
         private float windSailThrust = 0;
-        private Vector3 windDirection = new Vector3(0, 0, 0);
+        private Vector3 windDirection = new VRageMath.Vector3(0, 0, 0);
         private Vector3 sailDirection = new Vector3(0, 0, 0);
         private DateTime lastWindUpdate;
         private static Random rand = new Random();
